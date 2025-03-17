@@ -1,8 +1,8 @@
 function checkForSpam(message) {
-    let normalise = message.toLowerCase();
+    const normalise = message.toLowerCase();
     let getIndexSpam = normalise.indexOf('spam');
     let getIndexSale = normalise.indexOf('sale');
-    if (getIndexSpam >= 1 || getIndexSale >= 1) {
+    if (getIndexSpam >= 0 || getIndexSale >= 0) {
         return true;
     }
     else {
